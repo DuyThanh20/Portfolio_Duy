@@ -1,0 +1,432 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+/* Nền background */
+#backgound {
+  background: url("../image/background-100.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+}
+#backgound1 {
+  background: url("../image/background-100.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Custom search box */
+.search-box-2 {
+  position: relative;
+  width: 230px;
+}
+.search-box-2 input {
+  width: 100%;
+  height: 40px;
+  padding: 10px 10px 10px 35px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  font-size: 17px;
+  outline: none;
+}
+.search-box-2 i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 15px;
+  pointer-events: none;
+}
+/* Menu link */
+.navbar-nav .nav-link {
+  position: relative;
+  color: rgba(249, 184, 20, 1.00);
+  font-size: 17px;
+  padding: 8px 15px;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+/* Gạch chân khi hover */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: rgba(249, 184, 20, 1.00); /* màu gạch chân */
+  transition: width 0.3s ease-in-out;
+}
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+/* Video banner */
+.video-banner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 80vh;
+  max-height: 630px;
+  overflow: hidden;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+}
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+.video-banner .container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+.intro-avatar {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+/* Tiêu đề */
+.hello-heading {
+  font-size: 60px;
+  font-weight: 900;
+  color: #eee;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+.hello-heading .orange {
+  color: orange;
+}
+/* Đoạn giới thiệu */
+.intro-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #f1f1f1;
+}
+/* Liên hệ */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+.contact-btn {
+  background-color: orange;
+  color: #000;
+  padding: 10px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+.contact-btn:hover {
+  background-color: #ff9800;
+  color: #fff;
+}
+/* Responsive cho Mobile */
+@media (max-width: 768px) {
+  .video-banner {
+    padding: 40px 0;
+    margin-top: 120px;
+    max-height: unset;
+  }
+  .hello-heading {
+    font-size: 36px;
+    text-align: center;
+  }
+  .intro-text {
+    font-size: 16px;
+    text-align: justify;
+  }
+  .intro-avatar {
+    max-width: 220px;
+    max-height: 300px;
+    margin: 0 auto 20px;
+  }
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+/* Animation xuất hiện */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fade-in-left {
+  animation: fadeInLeft 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+.fade-in-right {
+  animation: fadeInRight 1.2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+/*Profile*/
+.profile-section {
+  color: #fff;
+}
+.card-block {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.50);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+.card-block h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.year {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 5px;
+}
+.software-list, .timeline, .plain-list {
+  list-style: none;
+  padding-left: 0;
+}
+.software-list li, .timeline li, .plain-list li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.software-list .label {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 3px 8px;
+  margin-right: 10px;
+  display: inline-block;
+  min-width: 30px;
+  text-align: center;
+}
+.timeline {
+  border-left: 2px solid #555;
+  padding-left: 20px;
+  position: relative;
+}
+.timeline li {
+  position: relative;
+  margin-bottom: 20px;
+}
+.timeline li::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+  top: 3px;
+}
+.note {
+  font-size: 12px;
+  color: #ccc;
+}
+/* Responsive spacing */
+@media (max-width: 768px) {
+  .card-block {
+    padding: 15px;
+  }
+  .software-list .label {
+    margin-bottom: 5px;
+  }
+}
+/*Nội dung phần contents*/
+.contents-section {
+  color: #f1f1f1;
+  border-radius: 20px;
+}
+.contents-title {
+  font-size: 72px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  color: rgba(255, 165, 0, 1.00);
+}
+.content-box {
+  background-color: rgba(0, 0, 0, 0.50);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  height: 100%;
+}
+.content-number {
+  display: inline-block;
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 5px 15px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.content-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+.content-detail {
+  font-size: 15px;
+  color: #ccc;
+  margin: 0;
+}
+/* Responsive tối ưu */
+@media (max-width: 768px) {
+  .contents-title {
+    font-size: 48px;
+  }
+  .content-number {
+    font-size: 14px;
+    padding: 4px 12px;
+  }
+  .content-title {
+    font-size: 18px;
+  }
+  .content-detail {
+    font-size: 14px;
+  }
+}
+/*Social Media*/
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.info-box {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 700px;
+}
+.info-grid {
+  font-size: 0.9rem;
+}
+.info-grid span {
+  display: block;
+}
+.image-thumb {
+  background-color: #333;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+}
+.image-thumb.tall {
+  aspect-ratio: 596 / 837;
+}
+/*Sach lat*/
+.book-wrapper {
+  max-width: 100%;
+  margin: 30px auto;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+.book-container {
+  width: 100%;
+  max-width: 842px;
+  aspect-ratio: 842 / 596;
+  position: relative;
+  perspective: 2000px;
+}
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  transition: transform 1s ease, z-index 1s;
+  z-index: var(--z, 1);
+  backface-visibility: hidden;
+}
+.page.flipped {
+  transform: rotateY(-180deg);
+  --z: 0;
+}
+.page img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+.controls {
+  text-align: center;
+  margin-top: 20px;
+}
+@media (max-width: 576px) {
+  button {
+    width: 100px;
+    font-size: 14px;
+  }
+}
+/*Contact*/
+.backgound2 {
+  background-color: rgba(0, 0, 0, 1.00)
+}
+.contact-title {
+  color: rgba(249, 184, 20, 1.00);
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.footer {
+  text-align: center;
+  padding-top: 2rem;
+  color: white;
+  font-size: 0.9rem;
+}
+iframe {
+  border-radius: 10px;
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+@media (min-width: 768px) {
+  iframe {
+    height: 320px;
+  }
+}
